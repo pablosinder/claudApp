@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/claudApp/static/css/main.6db57cba.css",
-    "main.js": "/claudApp/static/js/main.013b0a88.js",
+    "main.css": "/claudApp/static/css/main.4620247c.css",
+    "main.js": "/claudApp/static/js/main.91d0171c.js",
     "static/js/453.35732811.chunk.js": "/claudApp/static/js/453.35732811.chunk.js",
     "index.html": "/claudApp/index.html",
-    "main.6db57cba.css.map": "/claudApp/static/css/main.6db57cba.css.map",
-    "main.013b0a88.js.map": "/claudApp/static/js/main.013b0a88.js.map",
+    "main.4620247c.css.map": "/claudApp/static/css/main.4620247c.css.map",
+    "main.91d0171c.js.map": "/claudApp/static/js/main.91d0171c.js.map",
     "453.35732811.chunk.js.map": "/claudApp/static/js/453.35732811.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6db57cba.css",
-    "static/js/main.013b0a88.js"
+    "static/css/main.4620247c.css",
+    "static/js/main.91d0171c.js"
   ]
 }

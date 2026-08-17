@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/claudApp/static/css/main.f855e6bc.css",
-    "main.js": "/claudApp/static/js/main.b0e8df9f.js",
+    "main.css": "/claudApp/static/css/main.6db57cba.css",
+    "main.js": "/claudApp/static/js/main.013b0a88.js",
     "static/js/453.35732811.chunk.js": "/claudApp/static/js/453.35732811.chunk.js",
-    "static/media/logo.svg": "/claudApp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/claudApp/index.html",
-    "main.f855e6bc.css.map": "/claudApp/static/css/main.f855e6bc.css.map",
-    "main.b0e8df9f.js.map": "/claudApp/static/js/main.b0e8df9f.js.map",
+    "main.6db57cba.css.map": "/claudApp/static/css/main.6db57cba.css.map",
+    "main.013b0a88.js.map": "/claudApp/static/js/main.013b0a88.js.map",
     "453.35732811.chunk.js.map": "/claudApp/static/js/453.35732811.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.b0e8df9f.js"
+    "static/css/main.6db57cba.css",
+    "static/js/main.013b0a88.js"
   ]
 }

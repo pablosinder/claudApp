@@ -1,0 +1,87 @@
+.game-screen {
+  height: 100%; /* llena .app-root, que ya está acotado a 375x667 en App.css */
+  padding: clamp(8px, 2.2vh, 16px) 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(6px, 1.6vh, 14px);
+  overflow: hidden;
+}
+
+.game-top-bar {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.game-word-area {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 2.5vh, 20px);
+}
+
+/* Foto de Pexels relacionada con la palabra, arriba, como una tarjeta propia — la
+   palabra a completar va debajo, no encima de la imagen. Si la foto no carga,
+   GameScreen no renderiza este bloque en absoluto (ver photoOk), así que nunca se ve
+   un ícono roto ni un hueco vacío. */
+.game-photo-frame {
+  position: relative;
+  width: clamp(140px, 34vh, 210px);
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.game-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.game-photo-emoji {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(34px, 9vh, 46px);
+  height: clamp(34px, 9vh, 46px);
+  border-radius: 50%;
+  background: #fff;
+  font-size: clamp(1.1rem, 4.5vh, 1.6rem);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.game-emoji {
+  font-size: clamp(1.8rem, 6.5vh, 3.4rem);
+  line-height: 1;
+}
+
+.game-feedback-slot {
+  flex-shrink: 0;
+  min-height: clamp(0px, 5vh, 44px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-controls {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 2.5vw, 14px);
+  width: 100%;
+}

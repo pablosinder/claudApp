@@ -1,0 +1,65 @@
+/* Sin relleno ni caja visible: debe leerse como el espacio vacío de la letra que
+   falta, igual que las demás letras de la palabra, no como un bloque de otro color.
+   Solo un subrayado (como el que tenían las letras antes de poder dibujarse encima)
+   marca dónde escribir. */
+.trace-canvas-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  border-bottom: 5px solid var(--color-primary, #5b3ee0);
+  overflow: hidden;
+  touch-action: none;
+}
+
+.trace-canvas-guide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--canvas-size, 240px) * 0.55);
+  font-weight: 700;
+  color: #5b3ee0;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.trace-canvas-pointer-hint {
+  position: absolute;
+  top: calc(var(--canvas-size, 240px) * 0.05);
+  right: calc(var(--canvas-size, 240px) * 0.05);
+  font-size: calc(var(--canvas-size, 240px) * 0.2);
+  animation: bounce-hint 1s infinite;
+  pointer-events: none;
+}
+
+@keyframes bounce-hint {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.trace-canvas {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.trace-canvas-empty-label {
+  position: absolute;
+  bottom: calc(var(--canvas-size, 240px) * 0.06);
+  left: 4px;
+  right: 4px;
+  text-align: center;
+  color: #6b5ea8;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
+  font-size: calc(var(--canvas-size, 240px) * 0.085);
+  font-weight: 600;
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

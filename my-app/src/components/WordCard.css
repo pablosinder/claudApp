@@ -1,0 +1,31 @@
+.word-card-letters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(1.6rem, 5.5vh, 3rem);
+  font-weight: 800;
+  color: #3a2e6b;
+}
+
+.word-card-letter {
+  min-width: 0.9em;
+  text-align: center;
+  /* Halo blanco en vez de una placa sólida detrás del texto: mantiene la letra
+     legible sobre cualquier foto de fondo sin taparla con un rectángulo opaco. */
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.95),
+    0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+/* El hueco es el propio TraceCanvas: se le da un tamaño estable en CSS (no depende
+   de su contenido) para que el ResizeObserver de TraceCanvas tenga algo fijo que
+   medir, en vez de un tamaño circular que dependa del propio canvas. Más chico que
+   antes para dejar ver más foto de fondo alrededor. */
+.word-card-blank-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(85px, 24vh, 170px);
+  height: clamp(85px, 24vh, 170px);
+}

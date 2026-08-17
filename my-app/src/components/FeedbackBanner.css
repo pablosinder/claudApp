@@ -1,0 +1,31 @@
+.feedback-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 24px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  animation: feedback-pop 0.35s ease;
+}
+
+.feedback-success {
+  background: #d9f7be;
+  color: #2b7a0b;
+}
+
+.feedback-retry {
+  background: #fff1c1;
+  color: #8a5a00;
+}
+
+.feedback-emoji {
+  font-size: 1.8rem;
+}
+
+@keyframes feedback-pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); }
+}

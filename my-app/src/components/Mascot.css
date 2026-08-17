@@ -1,0 +1,32 @@
+.mascot {
+  display: inline-block;
+  line-height: 1;
+  filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.1));
+}
+
+.mascot-happy {
+  animation: mascot-sway 2.4s ease-in-out infinite;
+}
+
+.mascot-excited {
+  animation: mascot-jump 0.6s ease-in-out infinite;
+}
+
+.mascot-thinking {
+  animation: mascot-tilt 1.6s ease-in-out infinite;
+}
+
+@keyframes mascot-sway {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+
+@keyframes mascot-jump {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-14px) scale(1.08); }
+}
+
+@keyframes mascot-tilt {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-8deg); }
+}

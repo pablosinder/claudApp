@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+:root {
+  --color-primary: #5b3ee0;
+  --color-bg-1: #fff4d6;
+  --color-bg-2: #e0f7ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .app-shell ocupa el viewport real y centra el "marco de teléfono". Todo lo que
+   necesita saber sobre el tamaño real de pantalla vive aquí; las pantallas del
+   juego dentro de .app-root solo usan height:100% y nunca ven el viewport real,
+   así que el resultado es el mismo tanto en un teléfono real como en una ventana
+   de escritorio grande. */
+.app-shell {
+  width: 100vw;
+  height: 100vh; /* respaldo para navegadores sin soporte de dvh */
+  width: 100dvw;
+  height: 100dvh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #20202c;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.app-root {
+  width: min(100%, 375px);
+  height: min(100%, 667px);
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(160deg, var(--color-bg-2), var(--color-bg-1));
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.big-button {
+  border: none;
+  border-radius: 999px;
+  padding: clamp(12px, 2.4vh, 18px) clamp(20px, 5vw, 32px);
+  font-size: clamp(1rem, 3.4vh, 1.3rem);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12);
+  min-height: clamp(46px, 9vh, 64px);
+}
+
+.big-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.big-button-primary {
+  background: linear-gradient(90deg, #5b3ee0, #8a6cff);
+  color: #fff;
+}
+
+.icon-button {
+  width: clamp(42px, 8vh, 56px);
+  height: clamp(42px, 8vh, 56px);
+  min-width: clamp(42px, 8vh, 56px);
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  font-size: clamp(1.2rem, 3vh, 1.6rem);
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.icon-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.icon-button-active {
+  background: #ffd166;
 }
